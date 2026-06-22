@@ -1,0 +1,53 @@
+{
+  "$schema": "https://raw.githubusercontent.com/platformio/platformio-core/develop/platformio/assets/schema/library.json",
+  "name": "ViewPoint",
+  "version": "1.10.0",
+  "description": "High-speed serial plotting library for the ViewPoint desktop application. Pairs with the SignalCore DSP library for its signal-generation and FFT examples.",
+  "keywords": [
+    "arduino",
+    "serial",
+    "plotting",
+    "visualization",
+    "dsp",
+    "fft"
+  ],
+  "homepage": "https://docs.voidloop.com/viewpoint/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/VoidLoopers/ViewPoint"
+  },
+  "authors": [
+    {
+      "name": "Zachariah Magee",
+      "url": "https://github.com/VoidLoopers/ViewPoint",
+      "maintainer": true
+    }
+  ],
+  "frameworks": [
+    "arduino"
+  ],
+  "platforms": "*",
+  "dependencies": [
+    {
+      "name": "SignalCore",
+      "version": "https://github.com/ZachariahMagee/SignalCore.git#v0.1.0"
+    }
+  ],
+  "headers": [
+    "ViewPoint.h"
+  ],
+  "examples": "examples",
+  "export": {
+    "exclude": [
+      ".DS_Store",
+      ".git",
+      ".pio",
+      ".vscode",
+      "dev",
+      "notes",
+      "releases",
+      "skills",
+      "*.zip"
+    ]
+  }
+}

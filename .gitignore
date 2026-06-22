@@ -1,0 +1,12 @@
+.pio
+CMakeListsPrivate.txt
+cmake-build-*/ 
+.DS_store
+tracking.md
+.vscode/
+PinsToUse.md
+releases/
+notes/
+/dev/
+/docs/icon/
+/docs/reference/
