@@ -764,7 +764,13 @@ public:
         for (int i = 0; i < traceId * 2; i++) {
             encoder_.sendEmpty();
         }
-        encoder_.sendPair(v1, v2);
+        // Scatter wire order is (y, x) so the host's values1 slot carries Y,
+        // matching the buffered flush path in sendBufferedData().
+        if (plotType_ == PlotType::Scatter) {
+            encoder_.sendPair(v2, v1);
+        } else {
+            encoder_.sendPair(v1, v2);
+        }
         encoder_.endData();
     }
 
