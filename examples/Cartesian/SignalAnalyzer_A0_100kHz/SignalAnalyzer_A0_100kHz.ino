@@ -1,6 +1,6 @@
 /**
  * SignalAnalyzer_A0_100kHz.ino
- * @version V1R0
+ * @version 1.0.0
  * @date 04-03-26
  *
  * ViewPoint is brought to you by VoidLoop. See www.voidloop.com for more details.

@@ -1,11 +1,11 @@
 /**
  * WindRoseChart.ino
- * @version V1R1 R0.2
+ * @version 1.0.0
  * @date 01-27-26
  * 
  * ViewPoint is brought to you by VoidLoop. See www.voidloop.com for more details.
  * WindRoseChart.ino — Wind Direction Histogram (Wind Rose)
- * @version ViewPoint V1R1
+ * @version 1.0.0
  *
  * Displays a wind rose showing how often wind comes from different directions.
  *

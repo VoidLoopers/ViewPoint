@@ -1,6 +1,6 @@
 /**
  * HelloScatter.ino
- * @version V1R1 R0.3
+ * @version 1.0.0
  * @date 05-12-26
  *
  * ViewPoint is brought to you by VoidLoop. See www.voidloop.com for more details.

@@ -1,6 +1,6 @@
 /**
  * VibrationAnalysisXY.ino
- * @version V1R1 R0.2
+ * @version 1.0.0
  * @date 01-27-26
  * 
  * ViewPoint is brought to you by VoidLoop. See www.voidloop.com for more details.

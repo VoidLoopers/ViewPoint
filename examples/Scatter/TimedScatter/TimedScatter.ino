@@ -1,6 +1,6 @@
 /**
  * TimedScatter.ino
- * @version V1R1
+ * @version 1.0.0
  * @date 03-25-26
  *
  * ViewPoint is brought to you by VoidLoop. See www.voidloop.com for more details.
