@@ -1,6 +1,6 @@
 /**
- * LiveLissajous_Teensy.ino
- * @version V1R2
+ * LiveLissajous.ino
+ * @version V1R1
  * @date 03-28-26
  *
  * ViewPoint is brought to you by VoidLoop. See www.voidloop.com for more details.

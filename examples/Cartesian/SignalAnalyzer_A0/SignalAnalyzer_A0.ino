@@ -312,11 +312,11 @@ void loop() {
                   peak_freq_kHz, peak_dB,
                   windows[current_window].name,
                   SAMPLE_RATE / FFT_SIZE,
-                  toString(trigger.getTriggerMode()));
+                  toString(trigger.mode()));
 #else
     view.sendInfo("Time domain | %.0f kSPS | TRG=%s",
                   SAMPLE_RATE / 1000.0f,
-                  toString(trigger.getTriggerMode()));
+                  toString(trigger.mode()));
 #endif
 
     abdma.clearInterrupt();

@@ -126,8 +126,10 @@ void setup_signals() {
     // Configure square wave carrier
     sig_gen.setCarrier(SignalShape::Square, carrier_frequency);
 
-    // Add some amplitude modulation for visual interest
-    sig_gen.setAM(SignalShape::Sine, 2, 0.01);  // 2 Hz AM at 1%
+    // Add some amplitude modulation for visual interest.
+    // setAM's amplitude is a PERCENT depth (0..100), unlike setCarrier's
+    // linear gain — 1 here means 1% modulation depth.
+    sig_gen.setAM(SignalShape::Sine, 2, 1);  // 2 Hz AM at 1% depth
 
     // Add noise to make it realistic
     sig_gen.setNoise(NOISE_AMPLITUDE);

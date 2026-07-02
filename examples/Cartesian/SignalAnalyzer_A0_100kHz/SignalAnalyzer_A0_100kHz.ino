@@ -239,7 +239,7 @@ void loop() {
                   peak_freq_kHz, peak_dB,
                   windows[current_window].name,
                   SAMPLE_RATE / FFT_SIZE,
-                  toString(trigger.getTriggerMode()));
+                  toString(trigger.mode()));
 
     abdma.clearInterrupt();
 }

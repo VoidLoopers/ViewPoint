@@ -200,7 +200,7 @@ void setup_spectrum() {
     // Initialize signal generator
     spec_carrier_freq = SPEC_CARRIER_START;
     spec_sig.setCarrier(SignalShape::Square, spec_carrier_freq);
-    spec_sig.setAM(SignalShape::Sine, 2, 0.01);
+    spec_sig.setAM(SignalShape::Sine, 2, 1);   // 1% depth (setAM takes percent)
     spec_sig.setNoise(SPEC_NOISE_AMP);
     spec_fft.setWindowType(WindowType::BlackmanHarris);
 }
@@ -247,7 +247,7 @@ void setup_display_modes() {
     // but we re-init for self-containment)
     spec_carrier_freq = SPEC_CARRIER_START;
     spec_sig.setCarrier(SignalShape::Square, spec_carrier_freq);
-    spec_sig.setAM(SignalShape::Sine, 2, 0.01);
+    spec_sig.setAM(SignalShape::Sine, 2, 1);   // 1% depth (setAM takes percent)
     spec_sig.setNoise(SPEC_NOISE_AMP);
     spec_fft.setWindowType(WindowType::BlackmanHarris);
 
