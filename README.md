@@ -1,7 +1,7 @@
 # ViewPoint Arduino Library
 
 @date June 01, 2026
-@version 1.0.0
+@version 1.0.1
 Protocol: V1R1
 
 ## Sketches Included

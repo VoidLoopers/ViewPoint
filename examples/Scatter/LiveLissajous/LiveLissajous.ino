@@ -1,13 +1,12 @@
 /**
  * LiveLissajous.ino
- * @version 1.0.0
- * @date 03-28-26
+ * @version 1.0.1
+ * @date 07-12-26
  *
  * ViewPoint is brought to you by VoidLoop. See www.voidloop.com for more details.
  * LiveLissajous_Teensy.ino - Real-time Lissajous figures from two ADC channels
  *
  * Board: Teensy 4.1
- * Coming soon: LiveLissajous_Giga, LiveLissajous_Pico
  *
  * Lissajous figures are the oldest trick in the oscilloscope playbook. Feed two
  * sinusoidal signals into X and Y channels: if they share the same frequency,
@@ -59,13 +58,12 @@ using namespace viewpoint;
 // ─── Configuration Constants ───
 #define ADC_PIN_X       A0
 #define ADC_PIN_Y       A1
-#define ADC_BITS        10
+#define ADC_BITS        12
 #define VREF            3.3
 #define ADC_COUNTS      ((1 << ADC_BITS) - 1)
 #define DC_BIAS         (VREF / 2.0)    // Assumed mid-supply bias on both inputs
-#define SAMPLE_RATE     800'000           // 50 kHz — deterministic via hardware PIT timer
-#define FPS             50
-#define DMA_BUF_SIZE    (int)(SAMPLE_RATE / FPS)             // ~1.25 ms per buffer at 800 kHz
+#define SAMPLE_RATE     50000           // 50 kHz — deterministic via hardware PIT timer
+#define DMA_BUF_SIZE    128             // ~2.56 ms per buffer at 50 kHz
 
 // Display range centered on zero after DC removal
 #define AXIS_RANGE      1.8             // ±1.8 V covers full 3.3 V swing centered
@@ -102,7 +100,7 @@ void setup() {
     adc->adc0->startTimer(SAMPLE_RATE);
     adc->adc1->startTimer(SAMPLE_RATE);
 
-    view.begin(PlotType::Scatter, Mode::Frames, DMA_BUF_SIZE);
+    view.begin(PlotType::Scatter, Mode::Frames);
     view.setDelay(0);
     
     view.setPlotTitle("Lissajous (A0 vs A1)");
